@@ -1,0 +1,27 @@
+﻿int cantidadNumeros;
+int numeroBuscar;
+
+Console.Write("Ingrese la cantidad de numeros: ");
+cantidadNumeros = int.Parse(Console.ReadLine());
+
+int[] arregloNumeros = new int[cantidadNumeros];
+
+for (int i = 0; i < arregloNumeros.Length; i++)
+{
+    Console.Write("Ingrese el numero: ");
+    arregloNumeros[i] = int.Parse(Console.ReadLine());
+}
+Console.Write("Ingrese el numero a buscar: ");
+numeroBuscar = int.Parse(Console.ReadLine());
+bool encontrado = false;
+
+for (int i = 0; i < arregloNumeros.Length; i++)
+{
+    if (arregloNumeros[i] == numeroBuscar)
+    {
+        encontrado = true;
+        break;
+    }
+}
+
+Console.WriteLine(encontrado ? "Numero encontrado" : "Numero no encontrado");
